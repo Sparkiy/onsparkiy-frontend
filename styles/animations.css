@@ -54,3 +54,8 @@
   from { transform: scale(0); }
   to { transform: scale(1); }
 }
+
+@keyframes animation-scaleto1-vertical {
+  from { transform: scale(1, 0); }
+  to { transform: scale(1, 1); }
+}

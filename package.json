@@ -40,6 +40,7 @@
       "aurelia-templating-binding": "github:aurelia/templating-binding@^0.12.0",
       "aurelia-templating-resources": "github:aurelia/templating-resources@^0.12.0",
       "aurelia-templating-router": "github:aurelia/templating-router@^0.13.0",
+      "aurelia-validation": "github:aurelia/validation@master",
       "core-js": "npm:core-js@^0.9.5",
       "fastclick": "npm:fastclick@^1.0.6",
       "jquery": "github:components/jquery@2.1.3",

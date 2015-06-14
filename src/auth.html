@@ -4,28 +4,53 @@
     <div class="auth-container center row">
 
       <!-- Sign in form -->
-      <div class="small-6 small-centered columns auth-plain">
+      <div class="medium-6 small-12 small-centered columns auth-plain">
         <div class="signin-panel left-solid">
-          <h3 class="welcome">Registered Users</h3>
-          <form>
-            <div class="row collapse">
+
+          <!-- Header -->
+          <h3 class="welcome">${headerText}</h3>
+
+          <!-- User form -->
+          <form role="form" submit.delegate="submitForm()" validate.bind="validation">
+
+            <!-- Username field -->
+            <div class="row collapse hidden signup-field">
               <div class="small-2  columns">
-                <span class="prefix"><i class="fi-torso-male"></i></span>
+                <span class="prefix"><i class="pe-7s-users"></i></span>
               </div>
               <div class="small-10  columns">
-                <input type="text" placeholder="username">
+                <input type="text" placeholder="username" value.bind="username">
               </div>
             </div>
+
+            <!-- Email field -->
+            <div class="row collapse">
+              <div class="small-2  columns">
+                <span class="prefix"><i class="pe-7s-mail"></i></span>
+              </div>
+              <div class="small-10  columns">
+                <input type="email" placeholder="email address" value.bind="email" autofocus>
+              </div>
+            </div>
+
+            <!-- Password field -->
             <div class="row collapse">
               <div class="small-2 columns ">
-                <span class="prefix"><i class="fi-lock"></i></span>
+                <span class="prefix"><i class="pe-7s-key"></i></span>
               </div>
               <div class="small-10 columns ">
-                <input type="password" placeholder="password">
+                <input type="password" placeholder="password" value.bind="password">
               </div>
             </div>
+
+            <!-- Action button -->
+            <input type="submit" value="${actionButtonText}"  disabled.bind="!validation.result.isValid" class="button secondary action-button">
           </form>
-          <a href="#" class="button secondary">Log In </a>
+
+          <!-- Signup message -->
+          <p class="signup-message">
+            New to Sparkiy? <a href="#" click.trigger="signUpClick()">Sign up</a>
+          </p>
         </div>
       </div>
 

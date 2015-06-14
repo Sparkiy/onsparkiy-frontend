@@ -1,23 +1,28 @@
-System.register(["modernizr", "fastclick"], function (_export) {
+System.register(["aurelia-router", "modernizr", "fastclick"], function (_export) {
   "use strict";
 
-  var App;
+  var Router, App;
 
   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
   return {
-    setters: [function (_modernizr) {}, function (_fastclick) {}],
+    setters: [function (_aureliaRouter) {
+      Router = _aureliaRouter.Router;
+    }, function (_modernizr) {}, function (_fastclick) {}],
     execute: function () {
       App = (function () {
-        function App() {
+        function App(router) {
           _classCallCheck(this, App);
-        }
-
-        App.prototype.configureRouter = function configureRouter(config, router) {
-          config.title = "Sparkiy";
-          config.map([{ route: ["", "auth"], moduleId: "./auth", nav: false, title: "Login" }]);
 
           this.router = router;
+          this.router.configure(function (config) {
+            config.title = "Sparkiy";
+            config.map([{ route: ["", "auth"], moduleId: "./auth", nav: false, title: "Login" }]);
+          });
+        }
+
+        App.inject = function inject() {
+          return [Router];
         };
 
         return App;
@@ -27,4 +32,4 @@ System.register(["modernizr", "fastclick"], function (_export) {
     }
   };
 });
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7TUFPYSxHQUFHOzs7Ozs7O0FBQUgsU0FBRztpQkFBSCxHQUFHO2dDQUFILEdBQUc7OztBQUFILFdBQUcsV0FDZCxlQUFlLEdBQUEseUJBQUMsTUFBTSxFQUFFLE1BQU0sRUFBRTtBQUM5QixnQkFBTSxDQUFDLEtBQUssR0FBRyxTQUFTLENBQUM7QUFDekIsZ0JBQU0sQ0FBQyxHQUFHLENBQUMsQ0FDVCxFQUFFLEtBQUssRUFBRSxDQUFDLEVBQUUsRUFBRSxNQUFNLENBQUMsRUFBRSxRQUFRLEVBQUUsUUFBUSxFQUFFLEdBQUcsRUFBRSxLQUFLLEVBQUUsS0FBSyxFQUFFLE9BQU8sRUFBRSxDQUN4RSxDQUFDLENBQUM7O0FBRUgsY0FBSSxDQUFDLE1BQU0sR0FBRyxNQUFNLENBQUM7U0FDdEI7O2VBUlUsR0FBRzs7O3FCQUFILEdBQUciLCJmaWxlIjoiYXBwLmpzIiwic291cmNlUm9vdCI6Ii4uL3NyYy8ifQ==
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Y0FRYSxHQUFHOzs7Ozs7OEJBSlIsTUFBTTs7O0FBSUQsU0FBRztBQUtILGlCQUxBLEdBQUcsQ0FLRixNQUFNLEVBQUU7Z0NBTFQsR0FBRzs7QUFNWixjQUFJLENBQUMsTUFBTSxHQUFHLE1BQU0sQ0FBQztBQUNyQixjQUFJLENBQUMsTUFBTSxDQUFDLFNBQVMsQ0FBQyxVQUFBLE1BQU0sRUFBSTtBQUM5QixrQkFBTSxDQUFDLEtBQUssR0FBRyxTQUFTLENBQUM7QUFDekIsa0JBQU0sQ0FBQyxHQUFHLENBQUMsQ0FDVCxFQUFDLEtBQUssRUFBRSxDQUFDLEVBQUUsRUFBRSxNQUFNLENBQUMsRUFBRSxRQUFRLEVBQUUsUUFBUSxFQUFFLEdBQUcsRUFBRSxLQUFLLEVBQUUsS0FBSyxFQUFFLE9BQU8sRUFBQyxDQUN0RSxDQUFDLENBQUM7V0FDSixDQUFDLENBQUM7U0FDSjs7QUFiVSxXQUFHLENBQ1AsTUFBTSxHQUFBLGtCQUFHO0FBQ2QsaUJBQU8sQ0FBQyxNQUFNLENBQUMsQ0FBQztTQUNqQjs7ZUFIVSxHQUFHOzs7cUJBQUgsR0FBRyIsImZpbGUiOiJhcHAuanMiLCJzb3VyY2VSb290IjoiLi4vc3JjLyJ9
