@@ -14,8 +14,7 @@ module.exports = function(config) {
 
     jspm: {
       // Edit this to your needs
-      loadFiles: ['test/**/*.js'],
-      serveFiles : ['src/**/*.js']
+      loadFiles: ['src/**/*.js', 'test/**/*.js']
     },
 
 
@@ -45,6 +44,7 @@ module.exports = function(config) {
         ]
       }
     },
+
 
     // test results reporter to use
     // possible values: 'dots', 'progress'

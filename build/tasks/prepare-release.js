@@ -7,12 +7,12 @@ var bump = require('gulp-bump');
 var args = require('../args');
 
 gulp.task('bump-version', function(){
-  return gulp.src(['./package.json', './bower.json'])
+  return gulp.src(['./package.json'])
     .pipe(bump({type:args.bump })) //major|minor|patch|prerelease
     .pipe(gulp.dest('./'));
 });
 
-gulp.task('changelog', function(callback) {
+gulp.task('changelog', function () {
   var pkg = JSON.parse(fs.readFileSync('./package.json', 'utf-8'));
 
   return changelog({

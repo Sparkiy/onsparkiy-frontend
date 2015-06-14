@@ -1,252 +1,232 @@
-## 0.12.0 (2015-06-08)
+### 0.13.1 (2015-06-09)
 
 
 #### Bug Fixes
 
-* **index:** ensure export of path module api ([17cf46cd](http://github.com/aurelia/framework/commit/17cf46cdfbf4081e08c41db3c20a0590c885d254))
+* **index:** detect System or require api and load appropriately ([2fa4d3e7](http://github.com/aurelia/bootstrapper/commit/2fa4d3e7a6f525912ed1384c6eab33ff34960eb0), closes [#110](http://github.com/aurelia/bootstrapper/issues/110))
+
+
+## 0.13.0 (2015-06-08)
+
+
+#### Bug Fixes
+
+* **all:** break out the history from the router plugin config ([864cf2c2](http://github.com/aurelia/bootstrapper/commit/864cf2c2d17bb9dd4d6642b7a7544de25e985926))
+* **bootstrapper:** remove catch handlers that kill stack traces during startup ([e867ca1f](http://github.com/aurelia/bootstrapper/commit/e867ca1f2c9865e65448c3a5f8074d2711cfe991))
+
+
+## 0.12.0 (2015-05-01)
+
+
+#### Bug Fixes
+
+* **all:**
+  * root should default to aurelia-app host when not specified ([ed3b7124](http://github.com/aurelia/bootstrapper/commit/ed3b712483696c73b8202ef51cc191b3c4493f35), closes [#5](http://github.com/aurelia/bootstrapper/issues/5))
+  * update to logLevel enum name api change ([64d8edf3](http://github.com/aurelia/bootstrapper/commit/64d8edf355c4caf13fbd02e888a3eaa038ffadf4))
+* **bootstrapper:** removees5-specific helper detection ([d55802b2](http://github.com/aurelia/bootstrapper/commit/d55802b26f44ff7d837bc8fe1a4b05795f58a57d))
+* **preparePlatform:** correct spelling ([010f0a9a](http://github.com/aurelia/bootstrapper/commit/010f0a9a25fe9ccd6536fbb1cfd10b9648aa4abc))
+
+
+## 0.11.0 (2015-04-09)
 
 
 #### Features
 
-* **aurelia:** update to use composition host instruction value ([bd456bc5](http://github.com/aurelia/framework/commit/bd456bc5411ed7f122bc14a2ecc0d7b0cc2f192b))
+* **all:**
+  * remove AtScript support ([65134367](http://github.com/aurelia/bootstrapper/commit/651343677e3d4d8825f065a7bad8d72708ac83b0))
+  * update compiler and core-is integration ([52d84e7a](http://github.com/aurelia/bootstrapper/commit/52d84e7a6594304f418da63d47cd734c99bf0afc))
 
 
-## 0.11.0 (2015-05-01)
+## 0.10.0 (2015-03-25)
 
 
 #### Bug Fixes
 
-* **aurelia:** throw a descriptive error when globalizeResources is called with non-strings ([09038c83](http://github.com/aurelia/framework/commit/09038c83b4ca02f2e55b30804b330c59207f682d))
-* **plugin:** make api use configure like other apis in framework ([cbfdaad7](http://github.com/aurelia/framework/commit/cbfdaad764abca997a15302073819d0723ccd32a), closes [#96](http://github.com/aurelia/framework/issues/96))
-* **plugins:** removed unnecessary es5 helper support ([710499a8](http://github.com/aurelia/framework/commit/710499a896ccbc6d787b29aa8da8aeb373bfae8f))
+* **bootstrapper:** change how default loader is discovered ([13b04160](http://github.com/aurelia/bootstrapper/commit/13b0416081d1cea542e7b54edb086e6ade977692))
 
 
 #### Features
 
-* **aurelia:** take advantage of previously configured host ([0c5bbcd7](http://github.com/aurelia/framework/commit/0c5bbcd799be99958dcea3c3a1f850bdd43700a4))
+* **bootstrapper:** new startup logic ([373bf740](http://github.com/aurelia/bootstrapper/commit/373bf740da2cffbeb33a652dd538ec1f1ce2f4c7))
 
 
-#### Breaking Changes
-
-* If you were using ES5 and used the computed helper on
-function, this will affect you as that is no longer present.
-
- ([710499a8](http://github.com/aurelia/framework/commit/710499a896ccbc6d787b29aa8da8aeb373bfae8f))
-
-
-## 0.10.0 (2015-04-09)
+### 0.9.5 (2015-02-28)
 
 
 #### Bug Fixes
 
-* **all:** update compiler and metadata plugin ([50e3afe0](http://github.com/aurelia/framework/commit/50e3afe0e5a4c6c0e15242433007e4fe068e35fc))
+* **package:** change jspm directories ([f82ca368](http://github.com/aurelia/bootstrapper/commit/f82ca3689a8b5aa197b22bd804dae0cbfd0cab7a))
+
+
+### 0.9.4 (2015-02-28)
+
+
+#### Bug Fixes
+
+* **build:** add missing bower bump ([e72cf895](http://github.com/aurelia/bootstrapper/commit/e72cf8957e5ca912dbd9a3c2bc2287050450d258))
+* **package:** update dependencies ([f3435bf8](http://github.com/aurelia/bootstrapper/commit/f3435bf8ecf8beff79494e1d68538fa5688379fd))
+
+
+### 0.9.3 (2015-01-29)
+
+#### Features
+
+* **bootstrapper:** allow for bootstrapping from the main module
+
+
+### 0.9.2 (2015-01-24)
+
+
+#### Bug Fixes
+
+* **bootstrapped:** ensure that templating resources are in System.map ([fb6ad861](http://github.com/aurelia/bootstrapper/commit/fb6ad8615483c7f9dedb017599c4f04bb6135c61))
+
+
+### 0.9.1 (2015-01-24)
+
+
+#### Bug Fixes
+
+* **package:** update deps and fix bower semver ranges ([8754ff0e](http://github.com/aurelia/bootstrapper/commit/8754ff0e915780ed14797eadcb43d9dccb60bf11))
+
+
+## 0.9.0 (2015-01-22)
+
+
+#### Bug Fixes
+
+* **all:** use default loader ([8acf5996](http://github.com/aurelia/bootstrapper/commit/8acf599669c59fb9b5625a98dcbc3f7acd5ce45f))
+* **package:** update dependencies ([a8811da7](http://github.com/aurelia/bootstrapper/commit/a8811da77ecb80ca11b0e7adaec8a76e841517cc))
 
 
 #### Features
 
-* **plugins:**
-  * remove AtScript support ([f1adb01a](http://github.com/aurelia/framework/commit/f1adb01ab32afcd8ba3b427e9274f72fb4d56fda))
-  * update to use new metadata locator function ([4b09490d](http://github.com/aurelia/framework/commit/4b09490daf7f351e1001557c8e8a8032bdadbf1c))
+* **all:** update to new plugin api ([50fc5ce6](http://github.com/aurelia/bootstrapper/commit/50fc5ce6f56bd24f3dbbc66a7f5aa0b93f7cbfed))
+* **bootstrapper:** identify polyfilled system and skip core-js ([76fab9a1](http://github.com/aurelia/bootstrapper/commit/76fab9a153ac71ff78e6d6e5a544b8df05041a5e))
 
 
-## 0.9.0 (2015-03-25)
+## 0.8.0 (2015-01-12)
 
 
 #### Bug Fixes
 
-* **all:** load resources by module id only ([655192b2](http://github.com/aurelia/framework/commit/655192b26f7c8b47fb57ad1522e85af58d971443))
-* **aurelia:**
-  * update to use latest animator default config api ([5dea25b5](http://github.com/aurelia/framework/commit/5dea25b57512ccf4701daf6520c0156582a5182b))
-  * update to use new view engine ([e6d20c42](http://github.com/aurelia/framework/commit/e6d20c42ead1f74652fb1bce5b5ae728b4b6bb77))
-  * update to load global resources through new resource pipeline ([bdbca554](http://github.com/aurelia/framework/commit/bdbca554e8d0e7ee839fb1b3b8269f590bc7aa97))
+* **package:** update Aurelia dependencies ([37aeca13](http://github.com/aurelia/bootstrapper/commit/37aeca13b7b14800c6f15f9103ba20c0c0a28ac3))
+
+
+## 0.7.0 (2015-01-07)
+
+
+#### Bug Fixes
+
+* **package:** update dependencies to latest ([57c487a0](http://github.com/aurelia/bootstrapper/commit/57c487a0284b1ce7c7a7938d16498b894b9b457b))
+
+
+### 0.6.1 (2015-01-06)
+
+
+#### Bug Fixes
+
+* **package:** update loader-systemjs to latest version ([09131833](http://github.com/aurelia/bootstrapper/commit/09131833c0fde8689f0261e57df31e736a481253))
+
+
+## 0.6.0 (2015-01-06)
+
+
+#### Bug Fixes
+
+* **bootstrapper:** ensure di is available as top level import ([3f50f876](http://github.com/aurelia/bootstrapper/commit/3f50f876943ca7b75511c8542ab2bde039bf4597))
 
 
 #### Features
 
-* **aurelia:** add parameter default to setRoot ([f3955d22](http://github.com/aurelia/framework/commit/f3955d228483758ce8b385bba14d99e053468612))
+* **bootstrapper:**
+  * switch router and resources over to plugin model ([aa93bce4](http://github.com/aurelia/bootstrapper/commit/aa93bce4e8ebf20e01128d2ce2a63201d6947c73))
+  * switch to core-js ([166c13d6](http://github.com/aurelia/bootstrapper/commit/166c13d6d8bbf86a7206be00566ded34ef9ab17d))
+  * add plugin helper for event aggregator ([6df89100](http://github.com/aurelia/bootstrapper/commit/6df8910076c8c164cceffd4a402ec7439e892edf))
+  * add plugin helper for binding language ([82a86ffc](http://github.com/aurelia/bootstrapper/commit/82a86ffcca2b3c0a3a23305e51d327244c0c5e19))
+  * add plugin helpers for router and resources ([fcb3ac34](http://github.com/aurelia/bootstrapper/commit/fcb3ac340cdf02e2ea6ad6089cac2a061d8ea1cd))
+* **build:** update compiler and switch to register module format ([b5619c13](http://github.com/aurelia/bootstrapper/commit/b5619c13ffd57f8e93741e98c8522c45ea4b381c))
 
 
-### 0.8.8 (2015-02-28)
+### 0.5.2 (2014-12-22)
 
 
 #### Bug Fixes
 
-* **package:** change jspm directories ([37f2670b](http://github.com/aurelia/framework/commit/37f2670b5498618a4b0602234008c2ed779bca4f))
+* **package:** update dependencies to latest ([ba1a63db](http://github.com/aurelia/bootstrapper/commit/ba1a63db7c47487b8f720c4a96fc12d0ce4b8547))
 
 
-### 0.8.7 (2015-02-28)
+### 0.5.1 (2014-12-22)
 
 
 #### Bug Fixes
 
-* **aurelia:** global resources left out ([4bb098a3](http://github.com/aurelia/framework/commit/4bb098a36ea226dedc5343f3c629d889f9028580))
-* **build:** add missing bower bump ([111797ae](http://github.com/aurelia/framework/commit/111797ae2f669b3eb9a86538c23f5e537fc259c5))
-* **package:** update dependencies ([79feec43](http://github.com/aurelia/framework/commit/79feec432b8f3afd7a2ca90fc4eec2445e34940f))
+* **package:** update dependencies to latest ([0fecdbc9](http://github.com/aurelia/bootstrapper/commit/0fecdbc95c4a445bb1e3a1ec65a02cc0059cc4e2))
+
+
+## 0.5.0 (2014-12-22)
+
+
+#### Bug Fixes
+
+* **bootstrapper:**
+  * update setRoot to remove transition ([98cea82e](http://github.com/aurelia/bootstrapper/commit/98cea82ec63a142c9f364b60cf56a5881a05f888))
+  * ensure that aurelia-logging-console is available ([53ef67d0](http://github.com/aurelia/bootstrapper/commit/53ef67d0eebacd7c71c78fcfcf8251906b12da14))
+* **package:** update dependencies to latest ([21c8d229](http://github.com/aurelia/bootstrapper/commit/21c8d2293fa3fa8e79d6c5e8dd36ef4760da8a9e))
+
+
+### 0.4.3 (2014-12-18)
+
+
+#### Bug Fixes
+
+* **package:** update dependencies to latest versions ([7402bbb8](http://github.com/aurelia/bootstrapper/commit/7402bbb89fb6fc7307af7127365eecb9cb84607b))
+
+
+### 0.4.2 (2014-12-18)
+
+
+#### Bug Fixes
+
+* **package:** update dependencies to latest versions ([06ede457](http://github.com/aurelia/bootstrapper/commit/06ede457f36f9347d7016905197d7b44006ae78c))
+
+
+### 0.4.1 (2014-12-17)
+
+
+#### Bug Fixes
+
+* **package:** update dependencies to latest versions ([1a6ecd09](http://github.com/aurelia/bootstrapper/commit/1a6ecd0999c693ef37d64529670b0274e996af23))
+
+
+## 0.4.0 (2014-12-17)
+
+
+#### Bug Fixes
+
+* **bootstrapper:** invalid loader name ([562b17b3](http://github.com/aurelia/bootstrapper/commit/562b17b3f98cd52d56b3c6c73edc8b67f1dd8f9d))
+* **package:** update dependencies to latest versions ([1cb2d30e](http://github.com/aurelia/bootstrapper/commit/1cb2d30e4d75b6a59132cf607a345aaad496ff9f))
+
+
+### 0.3.1 (2014-12-12)
+
+
+#### Bug Fixes
+
+* **bootstrapped:** bad import name for RouterView ([6590f2cf](http://github.com/aurelia/bootstrapper/commit/6590f2cf772d493763d0deac81647282d02edc1a))
+
+
+## 0.3.0 (2014-12-12)
+
+
+#### Bug Fixes
+
+* **package:** update dependencies to latest versions ([24d6d675](http://github.com/aurelia/bootstrapper/commit/24d6d6751086da93d2f00201bdf4afe7f2ad5423))
 
 
 #### Features
 
-* **aurelia:** ensure animator implementation ([e3ab3ab0](http://github.com/aurelia/framework/commit/e3ab3ab08aac022d0c7b58ddef7b8632f2e5f980))
-* **build:** add command line argument for semver bump. resolve #28 ([39652c80](http://github.com/aurelia/framework/commit/39652c8026dd26e459ed5e84a0924e1f58724d53))
-* **framework:** prevent forms without [action] from submiting ([a5805257](http://github.com/aurelia/framework/commit/a58052571281cce001089bc065858e47ee595874))
-
-
-### 0.8.6 (2015-02-03)
-
-
-#### Features
-
-* **plugins:** support legacy atscript annotation location ([37463681](http://github.com/aurelia/framework/commit/374636810d3e5249b3f1d8d6b4767f97c21a1240))
-
-
-### 0.8.5 (2015-01-29)
-
-
-#### Bug Fixes
-
-* **aurelia:** custom event undefined in local scope ([c3594bf9](http://github.com/aurelia/framework/commit/c3594bf9ae0b9836ef433d857f422131e65674c5))
-* **plugins:** set es5 computed properties correctly ([f1b140d9](http://github.com/aurelia/framework/commit/f1b140d9d2c846cc75e986d6fb967132d82df5e1))
-
-
-#### Features
-
-* **aurelia:** raise DOM events for start and compose ([feed2a3a](http://github.com/aurelia/framework/commit/feed2a3a05fe8cd9f5463a84ddb692aba4912193))
-
-
-### 0.8.4 (2015-01-25)
-
-
-#### Bug Fixes
-
-* **aurelia:** ensure plugin resources are loaded first ([bffcd614](http://github.com/aurelia/framework/commit/bffcd6146167b1169d9d43acf4857be84636ccc7))
-
-
-### 0.8.3 (2015-01-25)
-
-
-#### Bug Fixes
-
-* **plugins:** enable relative path plugins ([7cbe4d22](http://github.com/aurelia/framework/commit/7cbe4d22e47ef586a4800d1104ff90d15ff93b98))
-
-
-### 0.8.2 (2015-01-24)
-
-
-#### Bug Fixes
-
-* **package:** update deps and fix bower semver ranges ([3f05b27e](http://github.com/aurelia/framework/commit/3f05b27ed1c7961fc5049f848ea2f220949d7414))
-
-
-### 0.8.1 (2015-01-22)
-
-
-#### Bug Fixes
-
-* **plugins:** language helpers should return this for chaining ([d8817425](http://github.com/aurelia/framework/commit/d8817425e1ca618d752e9708e76674a3fb6e1191))
-
-
-## 0.8.0 (2015-01-22)
-
-
-#### Bug Fixes
-
-* **aurelia:** ensure all start code paths return a promise ([02752512](http://github.com/aurelia/framework/commit/0275251243271e30a7a484903ff0dd5a0da8eb80))
-* **package:** update dependencies ([b52b1b05](http://github.com/aurelia/framework/commit/b52b1b050a3d5809f7b0f602ebc8479f3d57eecb))
-
-
-#### Features
-
-* **aurelia:** enable splash screen swaps on load ([c2135d41](http://github.com/aurelia/framework/commit/c2135d41333328a2c7a6acfe4e0325d5c6bfb090))
-* **plugins:**
-  * update atscript helper to use new metadata api ([c9b4fb99](http://github.com/aurelia/framework/commit/c9b4fb99b1ac32fb71a69ad8e945cd4a208ca1eb))
-  * enable loading after bootstrapped ([790c9da2](http://github.com/aurelia/framework/commit/790c9da2ba89018d25f1dcf6c929b421f47c0b73))
-  * new plugin api including explicit support for es5 and at script ([b5c588bc](http://github.com/aurelia/framework/commit/b5c588bc716955273833ebbeabb33deb431bda5d))
-  * track plugin id for relative resource loading without system hack ([3465e849](http://github.com/aurelia/framework/commit/3465e84963e871b713cc4c3ca049eb459023ec9e))
-
-
-## 0.7.0 (2015-01-12)
-
-
-#### Bug Fixes
-
-* **aurelia:** load groups of resources in order ([2d936e5f](http://github.com/aurelia/framework/commit/2d936e5f6d1750841e99180d72078416926326f1))
-* **package:** update Aurelia dependencies ([f9df6e55](http://github.com/aurelia/framework/commit/f9df6e55ab139d8589516d8ebdf4f27ae3f83b90))
-* **plugins:** install sequentially ([cc78f9a0](http://github.com/aurelia/framework/commit/cc78f9a07974df00c1dcd88b6c71afcf1e52fcc9))
-
-
-## 0.6.0 (2015-01-07)
-
-
-#### Bug Fixes
-
-* **aurelia:** directly use app container to create root view model ([d86665b3](http://github.com/aurelia/framework/commit/d86665b390dbfa65f8c53c148adfc740d7e8ebb2))
-* **package:** update dependencies to latest ([bfcd292e](http://github.com/aurelia/framework/commit/bfcd292e5c26bde6b7064e866db566201f280b4f))
-
-
-#### Features
-
-* **aurelia:** set root sets element in container and uses composition engine ([9f6fa60d](http://github.com/aurelia/framework/commit/9f6fa60d27dc7e9d418970925df2fc23514c1422))
-
-
-## 0.5.0 (2015-01-06)
-
-
-#### Bug Fixes
-
-* **aurelia:**
-  * remove dependency on event aggregator ([424fa2bf](http://github.com/aurelia/framework/commit/424fa2bf3b9d2a4b79c2bb5cec5ad45d87273327))
-  * plugin loading module id fix ([ba79cb93](http://github.com/aurelia/framework/commit/ba79cb933e86e9cea6d391cb3664c82a31231f7e))
-* **plugins:** ensure plugin installation can only happen once ([9b37c848](http://github.com/aurelia/framework/commit/9b37c8485ce7d966e1f10eb66f088e341d9a4d4e))
-
-
-#### Features
-
-* **build:** update compiler and switch to register module format ([63c5d367](http://github.com/aurelia/framework/commit/63c5d367ed576a4350fcf6bfc3d87b4d55370372))
-
-
-## 0.4.0 (2014-12-22)
-
-
-#### Bug Fixes
-
-* **package:** update templating to latest version ([63d4c5f6](http://github.com/aurelia/framework/commit/63d4c5f6db58a50f6e1776b2b4939ca81ce4edf5))
-
-
-#### Features
-
-* **framework:** enable plugin loading and config ([f3b02ea9](http://github.com/aurelia/framework/commit/f3b02ea96c0a607b77bb7fbc7e0389748fb07c12))
-
-
-### 0.3.2 (2014-12-18)
-
-
-#### Bug Fixes
-
-* **package:** update templating to latest version ([5d1305e6](http://github.com/aurelia/framework/commit/5d1305e637d827f83c97df3e08db4f60f47915df))
-
-
-### 0.3.1 (2014-12-18)
-
-
-#### Bug Fixes
-
-* **package:** update templating to latest version ([1e981956](http://github.com/aurelia/framework/commit/1e9819565f1e4fa024c38c1d08f05cc00757b96f))
-
-
-## 0.3.0 (2014-12-17)
-
-
-#### Bug Fixes
-
-* **package:** update dependencies to latest versions ([12f0f9a8](http://github.com/aurelia/framework/commit/12f0f9a8af4d8178e80e87fc4ce7d9a8a53eba85))
-
-
-### 0.2.1 (2014-12-12)
-
-
-#### Bug Fixes
-
-* **package:** update dependencies to latest versions ([5ca82ad1](http://github.com/aurelia/framework/commit/5ca82ad11adf1163e984e3fe05cd64a132990624))
+* **polyfills:** automatically detect and load polyfills as needed ([f57132c8](http://github.com/aurelia/bootstrapper/commit/f57132c8849b626e95fd7546b10ae6cdb6b65a93))
 
 
 ## 0.2.0 (2014-12-11)
@@ -254,5 +234,5 @@ function, this will affect you as that is no longer present.
 
 #### Bug Fixes
 
-* **package:** update dependencies to their latest versions ([fe83ef37](http://github.com/aurelia/framework/commit/fe83ef37fdcdf878dd79564ed9b97ee56de8d621))
+* **package:** update dependencies to latest versions ([70c91a0c](http://github.com/aurelia/bootstrapper/commit/70c91a0c8dc514119b3bf7021c1b0d6e7960d054))
 

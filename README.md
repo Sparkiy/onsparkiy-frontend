@@ -1,26 +1,28 @@
-# aurelia-framework
+# aurelia-bootstrapper
 
 [![ZenHub](https://raw.githubusercontent.com/ZenHubIO/support/master/zenhub-badge.png)](https://zenhub.io)
 [![Join the chat at https://gitter.im/aurelia/discuss](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/aurelia/discuss?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-This library is part of the [Aurelia](http://www.aurelia.io/) platform and contains the aurelia framework which brings together all the required core aurelia libraries into a ready-to-go application-building platform.
+This library is part of the [Aurelia](http://www.aurelia.io/) platform and contains the bootstrapper which sets up the default configuration for the aurelia framework and gets you up and running quick and easy.
 
 > To keep up to date on [Aurelia](http://www.aurelia.io/), please visit and subscribe to [the official blog](http://blog.durandal.io/). If you have questions, we invite you to [join us on Gitter](https://gitter.im/aurelia/discuss). If you would like to have deeper insight into our development process, please install the [ZenHub](https://zenhub.io) Chrome Extension and visit any of our repository's boards. You can get an overview of all Aurelia work by visiting [the framework board](https://github.com/aurelia/framework#boards).
 
 ## Dependencies
 
-* [aurelia-dependency-injection](https://github.com/aurelia/dependency-injection)
-* [aurelia-binding](https://github.com/aurelia/binding)
-* [aurelia-metadata](https://github.com/aurelia/metadata)
-* [aurelia-templating](https://github.com/aurelia/templating)
-* [aurelia-loader](https://github.com/aurelia/loader)
-* [aurelia-task-queue](https://github.com/aurelia/task-queue)
-* [aurelia-logging](https://github.com/aurelia/logging)
-* [aurelia-path](https://github.com/aurelia/path)
+* [aurelia-loader-default](https://github.com/aurelia/loader-default)
+* [aurelia-framework](https://github.com/aurelia/framework)
+* [aurelia-logging-console](https://github.com/aurelia/logging-console)
+* [aurelia-history](https://github.com/aurelia/history)
+* [aurelia-history-browser](https://github.com/aurelia/history-browser)
+* [aurelia-router](https://github.com/aurelia/router)
+* [aurelia-templating-router](https://github.com/aurelia/templating-router)
+* [aurelia-templating-binding](https://github.com/aurelia/templating-binding)
+* [aurelia-templating-resources](https://github.com/aurelia/templating-resources)
+* [aurelia-event-aggregator](https://github.com/aurelia/event-aggregator)
 
 ## Used By
 
-* [aurelia-bootstrapper](https://github.com/aurelia/bootstrapper)
+The bootstrapper is intended to be used directly by applications only.
 
 ## Platform Support
 
@@ -36,10 +38,11 @@ To build the code, follow these steps.
   ```shell
   npm install
   ```
-3. Ensure that [Gulp](http://gulpjs.com/) is installed. If you need to install it, use the following command:
+3. Ensure that [Gulp](http://gulpjs.com/) is installed. If you need to install it, use the following commands:
 
   ```shell
   npm install -g gulp
+  npm install -g gulp-cli
   ```
 4. To build the code, you can now run:
 
@@ -59,7 +62,7 @@ To run the unit tests, first ensure that you have followed the steps above in or
   ```shell
   npm install -g karma-cli
   ```
-2. Ensure that [jspm](http://jspm.io/) is installed. If you need to install it, use the following command:
+2. Ensure that [jspm](http://jspm.io/) is installed. If you need to install it, use the following commnand:
 
   ```shell
   npm install -g jspm
