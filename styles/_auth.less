@@ -1,0 +1,58 @@
+@import "_colors.less";
+
+.auth-page {
+  background: @accentColorBlue;
+  height: 100%;
+  width: 100%;
+
+  /* Centering child */
+  /* https://css-tricks.com/centering-in-the-unknown/ */
+  text-align: center;
+
+  /* The ghost, nudged to maintain perfect centering */
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em; /* Adjusts for spacing */
+  }
+
+  .auth-container {
+    display: inline-block;
+    vertical-align: middle;
+
+    .auth-plain {
+      background: white;
+      box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+
+      animation: animation-scaleto1 0.3s;
+    }
+
+    .signin-panel {
+      padding: 2.5em;
+
+      .welcome {
+        padding: 1em 0;
+      }
+
+      i {
+        font-size: 30px;
+        line-height: 50px;
+        color: #999;
+      }
+
+      form input, form span {
+        height: 3em;
+      }
+
+      .button {
+        margin-top: 1em;
+      }
+    }
+
+    .newusers {
+      background: #fff;
+    }
+  }
+}

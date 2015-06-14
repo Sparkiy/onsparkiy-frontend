@@ -3,7 +3,6 @@
  */
 
 import "modernizr";
-import "jquery";
 import "fastclick";
 
 export class App {

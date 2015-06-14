@@ -95,31 +95,31 @@ $font-family-serif: "Segoe UI", Georgia, Cambria, "Times New Roman", Times, seri
 // $font-weight-normal: normal;
 // $font-weight-bold: bold;
 
-// $white       : #FFFFFF;
-// $ghost       : #FAFAFA;
-// $snow        : #F9F9F9;
-// $vapor       : #F6F6F6;
-// $white-smoke : #F5F5F5;
-// $silver      : #EFEFEF;
-// $smoke       : #EEEEEE;
-// $gainsboro   : #DDDDDD;
-// $iron        : #CCCCCC;
-// $base        : #AAAAAA;
-// $aluminum    : #999999;
-// $jumbo       : #888888;
-// $monsoon     : #777777;
-// $steel       : #666666;
-// $charcoal    : #555555;
-// $tuatara     : #444444;
-// $oil         : #333333;
-// $jet         : #222222;
-// $black       : #000000;
+$white       : #FFFFFF;
+$ghost       : #FAFAFA;
+$snow        : #F9F9F9;
+$vapor       : #F6F6F6;
+$white-smoke : #F5F5F5;
+$silver      : #EFEFEF;
+$smoke       : #EEEEEE;
+$gainsboro   : #DDDDDD;
+$iron        : #CCCCCC;
+$base        : #AAAAAA;
+$aluminum    : #999999;
+$jumbo       : #888888;
+$monsoon     : #777777;
+$steel       : #666666;
+$charcoal    : #555555;
+$tuatara     : #444444;
+$oil         : #333333;
+$jet         : #222222;
+$black       : #000000;
 
 // We use these as default colors throughout
 $primary-color: #2E9DC8;
 // $secondary-color: #e7e7e7;
-// $alert-color: #f04124;
-// $success-color: #43AC6A;
+$alert-color: #FF694E;
+$success-color: #92CA45;
 // $warning-color: #f08a24;
 // $info-color: #a0d3e8;
 
@@ -211,7 +211,7 @@ $primary-color: #2E9DC8;
 
 // We use these to control header font styles
 // $header-font-family: $body-font-family;
-// $header-font-weight: $font-weight-normal;
+$header-font-weight: lighter;
 // $header-font-style: normal;
 // $header-font-color: $jet;
 // $header-line-height: 1.4;
@@ -224,8 +224,8 @@ $primary-color: #2E9DC8;
 // $h2-font-size: rem-calc(37);
 // $h3-font-size: rem-calc(27);
 // $h4-font-size: rem-calc(23);
-// $h5-font-size: rem-calc(18);
-// $h6-font-size: 1rem;
+$h5-font-size: rem-calc(20);
+$h6-font-size: rem-calc(18);
 
 // We use these to control header size reduction on small screens
 // $h1-font-reduction: rem-calc(10);
@@ -986,17 +986,16 @@ $primary-color: #2E9DC8;
 // $include-html-panel-classes: $include-html-classes;
 
 // We use these to control the background and border styles
-// $panel-bg: scale-color($white, $lightness: -5%);
+$panel-bg: scale-color($white, $lightness: -3%);
 // $panel-border-style: solid;
 // $panel-border-size: 1px;
 // $callout-panel-bg: scale-color($primary-color, $lightness: 94%);
 
 // We use this % to control how much we darken things on hover
 // $panel-border-color: scale-color($panel-bg, $lightness: -11%);
-
 // We use these to set default inner padding and bottom margin
 // $panel-margin-bottom: rem-calc(20);
-// $panel-padding: rem-calc(20);
+$panel-padding: rem-calc(24);
 
 // We use these to set default font colors
 // $panel-font-color: $oil;

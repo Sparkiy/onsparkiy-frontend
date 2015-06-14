@@ -3,13 +3,14 @@ System.config({
   "babelOptions": {
     "optional": [
       "runtime",
-      "es7.decorators"
+      "es7.decorators",
+      "es7.classProperties"
     ]
   },
   "paths": {
-    "*": "*.js",
+    "*": "src/*.js",
     "github:*": "jspm_packages/github/*.js",
-    "aurelia-bootstrapper/*": "dist/*.js",
+    "onsparkiy-frontend/*": "dist/*.js",
     "npm:*": "jspm_packages/npm/*.js"
   }
 });

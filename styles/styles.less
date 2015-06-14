@@ -1,7 +1,7 @@
 @import "foundation/css/app.css";
 @import "animations.css";
-
-@accentColorBlue: #2E9DC8;
+@import "_auth.less";
+@import "_colors.less";
 
 html {
   height: 100%;
@@ -10,6 +10,10 @@ html {
 body {
   height: 100%;
   margin: 0;
+
+  &.nonav {
+    background: @accentColorBlue;
+  }
 }
 
 .splash {
