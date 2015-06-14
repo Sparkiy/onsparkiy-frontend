@@ -1,0 +1,47 @@
+.auth-page {
+  background: #2e9dc8;
+  height: 100%;
+  width: 100%;
+  /* Centering child */
+  /* https://css-tricks.com/centering-in-the-unknown/ */
+  text-align: center;
+  /* The ghost, nudged to maintain perfect centering */
+}
+.auth-page:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+  /* Adjusts for spacing */
+}
+.auth-page .auth-container {
+  display: inline-block;
+  vertical-align: middle;
+}
+.auth-page .auth-container .auth-plain {
+  background: white;
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+  animation: animation-scaleto1 0.3s;
+}
+.auth-page .auth-container .signin-panel {
+  padding: 2.5em;
+}
+.auth-page .auth-container .signin-panel .welcome {
+  padding: 1em 0;
+}
+.auth-page .auth-container .signin-panel i {
+  font-size: 30px;
+  line-height: 50px;
+  color: #999;
+}
+.auth-page .auth-container .signin-panel form input,
+.auth-page .auth-container .signin-panel form span {
+  height: 3em;
+}
+.auth-page .auth-container .signin-panel .button {
+  margin-top: 1em;
+}
+.auth-page .auth-container .newusers {
+  background: #fff;
+}
