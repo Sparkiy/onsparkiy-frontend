@@ -2,9 +2,11 @@
  * Created by Aleksandar Toplek on 14.6.2015..
  */
 
+import {inject} from 'aurelia-framework';
+import {Router} from 'aurelia-router';
+import {WebAPI} from './web-api';
 import {Validation} from 'aurelia-validation';
 import {computedFrom} from 'aurelia-framework';
-import {inject} from 'aurelia-framework';
 import "jquery";
 
 export class Auth {
@@ -12,7 +14,11 @@ export class Auth {
   headerText = "Registered User";
   actionButtonText = "Log in";
 
-  constructor() {
+  static inject = [Router, WebAPI];
+  constructor(router, api) {
+    this.router = router;
+    this.api = api;
+
     this.username = "";
     this.email = "";
     this.password = "";
@@ -20,8 +26,17 @@ export class Auth {
 
   submitForm() {
     // Check if the validation is valid before performing the submit
-    this.validation.validate().then(() => {
-      console.log("submit");
+    if (this.isRegister) {
+
+    }
+    else {
+      this.login();
+    }
+  }
+
+  login() {
+    this.api.getToken(this.username, this.password).then(result => {
+      this.router.navigate('profile');
     });
   }
 

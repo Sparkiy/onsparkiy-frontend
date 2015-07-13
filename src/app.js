@@ -16,7 +16,8 @@ export class App {
     this.router.configure(config => {
       config.title = "Sparkiy";
       config.map([
-        {route: ["", "auth"], moduleId: "./auth", nav: false, title: "Login"}
+        {route: ["", "auth"], moduleId: "./auth", nav: false, title: "Login"},
+        {route: ["profile"], moduleId: "./user-router"}
       ]);
     });
   }

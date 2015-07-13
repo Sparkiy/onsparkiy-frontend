@@ -14,7 +14,7 @@
           <form role="form" submit.delegate="submitForm()" validate.bind="validation">
 
             <!-- Username field -->
-            <div class="row collapse hidden signup-field">
+            <div class="row collapse signup-field">
               <div class="small-2  columns">
                 <span class="prefix"><i class="pe-7s-users"></i></span>
               </div>
@@ -24,7 +24,7 @@
             </div>
 
             <!-- Email field -->
-            <div class="row collapse">
+            <div class="row collapse hidden">
               <div class="small-2  columns">
                 <span class="prefix"><i class="pe-7s-mail"></i></span>
               </div>
@@ -44,7 +44,7 @@
             </div>
 
             <!-- Action button -->
-            <input type="submit" value="${actionButtonText}"  disabled.bind="!validation.result.isValid" class="button secondary action-button">
+            <input type="submit" value="${actionButtonText}"  class="button secondary action-button">
           </form>
 
           <!-- Signup message -->
