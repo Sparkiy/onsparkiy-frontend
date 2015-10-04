@@ -1,5 +1,7 @@
 node_modules
 bower_components
+jspm_packages
+dist
 .idea
 .DS_STORE
 build/reports
