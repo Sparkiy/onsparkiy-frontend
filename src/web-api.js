@@ -11,7 +11,7 @@ export class WebAPI {
   SparkiyTokenCookieKey = "sparkiyToken";
 
   // API calls
-  apiUrl = "https://microsoft-apiapp0ce6e00ab5d74279b1ffee5602d2b5a0.azurewebsites.net/";
+  apiUrl = "http://onsparkiy-api.azurewebsites.net/";
   apiToken = "token";
   apiProfile = "profile";
 
