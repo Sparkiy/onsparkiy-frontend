@@ -1,0 +1,60 @@
+<template>
+  <div class="auth-page">
+
+    <div class="auth-container center row">
+
+      <!-- Sign in form -->
+      <div class="medium-6 small-12 small-centered columns auth-plain">
+        <div class="signin-panel left-solid">
+
+          <!-- Header -->
+          <h3 class="welcome">${headerText}</h3>
+
+          <!-- User form -->
+          <form role="form" submit.delegate="submitForm()" validate.bind="validation">
+
+            <!-- Username field -->
+            <div class="row collapse signup-field">
+              <div class="small-2  columns">
+                <span class="prefix"><i class="pe-7s-users"></i></span>
+              </div>
+              <div class="small-10  columns">
+                <input type="text" placeholder="username" value.bind="username">
+              </div>
+            </div>
+
+            <!-- Email field -->
+            <div class="row collapse hidden">
+              <div class="small-2  columns">
+                <span class="prefix"><i class="pe-7s-mail"></i></span>
+              </div>
+              <div class="small-10  columns">
+                <input type="email" placeholder="email address" value.bind="email" autofocus>
+              </div>
+            </div>
+
+            <!-- Password field -->
+            <div class="row collapse">
+              <div class="small-2 columns ">
+                <span class="prefix"><i class="pe-7s-key"></i></span>
+              </div>
+              <div class="small-10 columns ">
+                <input type="password" placeholder="password" value.bind="password">
+              </div>
+            </div>
+
+            <!-- Action button -->
+            <input type="submit" value="${actionButtonText}"  class="button secondary action-button">
+          </form>
+
+          <!-- Signup message -->
+          <p class="signup-message">
+            New to Sparkiy? <a href="#" click.trigger="signUpClick()">Sign up</a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</template>

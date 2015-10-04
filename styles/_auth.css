@@ -1,0 +1,57 @@
+.auth-page {
+  background: #2e9dc8;
+  height: 100%;
+  width: 100%;
+  /* Centering child */
+  /* https://css-tricks.com/centering-in-the-unknown/ */
+  text-align: center;
+  font-size: 0;
+  /* The ghost, nudged to maintain perfect centering */
+}
+.auth-page:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.auth-page .auth-container {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16px;
+}
+.auth-page .auth-container .auth-plain {
+  background: white;
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+  animation: animation-scaleto1 0.3s;
+}
+.auth-page .auth-container .signin-panel {
+  padding: 2.5em;
+  transition: height 0.3s linear;
+}
+.auth-page .auth-container .signin-panel .welcome {
+  padding: 1em 0;
+}
+.auth-page .auth-container .signin-panel i {
+  font-size: 2em;
+  line-height: 1.5em;
+  color: #999;
+}
+.auth-page .auth-container .signin-panel form input[type='text'],
+.auth-page .auth-container .signin-panel form input[type='email'],
+.auth-page .auth-container .signin-panel form input[type='password'],
+.auth-page .auth-container .signin-panel form span {
+  height: 3em;
+}
+.auth-page .auth-container .signin-panel .button {
+  margin-top: 1em;
+}
+.auth-page .auth-container .signin-panel .signup-field.hidden {
+  display: none;
+}
+.auth-page .auth-container .signin-panel .signup-field.appear-vertical {
+  display: block;
+  animation: animation-scaleto1-vertical 0.3s;
+}
+.auth-page .auth-container .newusers {
+  background: #fff;
+}
