@@ -1,22 +1,21 @@
 System.config({
-  "transpiler": "babel",
-  "babelOptions": {
+  defaultJSExtensions: true,
+  transpiler: "babel",
+  babelOptions: {
     "optional": [
       "runtime",
       "es7.decorators",
       "es7.classProperties"
     ]
   },
-  "paths": {
+  paths: {
     "*": "src/*.js",
-    "github:*": "jspm_packages/github/*.js",
+    "github:*": "jspm_packages/github/*",
     "onsparkiy-frontend/*": "dist/*.js",
-    "npm:*": "jspm_packages/npm/*.js"
-  }
-});
+    "npm:*": "jspm_packages/npm/*"
+  },
 
-System.config({
-  "map": {
+  map: {
     "aurelia-animator-css": "github:aurelia/animator-css@0.2.0",
     "aurelia-bootstrapper": "github:aurelia/bootstrapper@0.12.0",
     "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.7.1",
@@ -47,12 +46,6 @@ System.config({
       "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.7.1",
       "aurelia-metadata": "github:aurelia/metadata@0.5.0",
       "aurelia-task-queue": "github:aurelia/task-queue@0.4.0",
-      "core-js": "npm:core-js@0.9.15"
-    },
-    "github:aurelia/binding@0.7.0": {
-      "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.8.1",
-      "aurelia-metadata": "github:aurelia/metadata@0.6.0",
-      "aurelia-task-queue": "github:aurelia/task-queue@0.5.0",
       "core-js": "npm:core-js@0.9.15"
     },
     "github:aurelia/binding@0.7.3": {
@@ -146,6 +139,9 @@ System.config({
       "core-js": "npm:core-js@0.9.15"
     },
     "github:aurelia/metadata@0.6.0": {
+      "core-js": "npm:core-js@0.9.15"
+    },
+    "github:aurelia/metadata@0.8.0": {
       "core-js": "npm:core-js@0.9.15"
     },
     "github:aurelia/route-recognizer@0.4.0": {
@@ -246,6 +242,8 @@ System.config({
     "github:aurelia/validation@master": {
       "aurelia-binding": "github:aurelia/binding@0.7.3",
       "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.8.1",
+      "aurelia-logging": "github:aurelia/logging@0.7.0",
+      "aurelia-metadata": "github:aurelia/metadata@0.8.0",
       "aurelia-templating": "github:aurelia/templating@0.12.1"
     },
     "github:jspm/nodelibs-process@0.1.1": {
@@ -261,4 +259,3 @@ System.config({
     }
   }
 });
-
