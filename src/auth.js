@@ -25,13 +25,45 @@ export class Auth {
   }
 
   submitForm() {
+    this.setEnabledSubmitCommand(false);
+
     // Check if the validation is valid before performing the submit
     if (this.isRegister) {
-
+      this.register();
     }
     else {
       this.login();
     }
+  }
+
+  setEnabledSubmitCommand(isEnabled) {
+    if (isEnabled)
+      // Enable submit button
+      $("#submit-form-signin").removeAttr("disabled");
+    else
+      // Disable submit button
+      $("#submit-form-signin").attr("disabled", "disabled");
+  }
+
+  register() {
+    // Check if username already exists
+    this.api.checkUsername(this.username).then(isValid => {
+      // Continue to registration if username is valid
+      if (isValid) {
+        this.api.register(this.username, this.password, this.email).then(result => {
+          if (result)
+            this.login();
+          else console.error("Failed to register");
+
+          this.setEnabledSubmitCommand(true);
+        });
+      }
+      else {
+        // Show user name taken message
+      }
+
+      this.setEnabledSubmitCommand(true);
+    });
   }
 
   login() {
@@ -41,6 +73,8 @@ export class Auth {
   }
 
   signUpClick() {
+    this.isRegister = true;
+
     // Show username field
     $(".signup-field").removeClass("hidden").addClass("appear-vertical");
     $(".signup-field input").focus();

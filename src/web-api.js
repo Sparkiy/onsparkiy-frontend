@@ -13,7 +13,52 @@ export class WebAPI {
   // API calls
   apiUrl = "https://api.onsparkiy.com/";
   apiToken = "token";
-  apiProfile = "profile";
+  apiProfile = "Profile";
+  apiCheckUsername = "UserName/IsTaken";
+  apiRegister = "Account/Register"
+
+  checkUsername(username) {
+    this.isRequesting = true;
+    return new Promise(resolve => {
+
+      // Request token POST call
+      $.ajax({
+        method: "GET",
+        url: this.apiUrl + this.apiCheckUsername + "?username=" + username
+      }).done(result => {
+        resolve(result === false);
+
+        this.isRequesting = false;
+      });
+    });
+  }
+
+  register(username, password, email) {
+    this.isRequesting = true;
+    return new Promise(resolve => {
+
+      // Create request content
+      let content = {
+        username: username,
+        password: password,
+        email: email
+      };
+
+      // Request token POST call
+      $.ajax({
+        method: "POST",
+        url: this.apiUrl + this.apiRegister,
+        data: content
+      }).done(result => {
+        if (!result)
+          resolve(true);
+        resolve(false);
+
+        this.isRequesting = false;
+      });
+
+    });
+  }
 
   getToken(username, password) {
     this.isRequesting = true;
